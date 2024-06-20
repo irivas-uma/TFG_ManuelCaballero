@@ -1,14 +1,14 @@
 import pyfirmata2
 import time
 import rospy
-from std_msgs.msg import Float32
+from std_msgs.msg import Float32, Bool
 
 def callback(data):
     rospy.loginfo("Recibido: %f", data.data)
 
 def listener_activate():
     rospy.init_node('aspirator_node', anonymous=True)
-    rospy.Subscriber('/aspirator/activate', bool, callback)
+    rospy.Subscriber('/aspirator/activate', Bool, callback)
     rospy.spin()
 
 def callback(data):
@@ -20,4 +20,4 @@ def callback(data):
 print("Arduino conectado por USB.")
 board = pyfirmata2.Arduino('COM3')
 if __name__ == '__main__':
-    listener()
+    listener_activate()
