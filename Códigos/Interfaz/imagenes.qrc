@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="interfaz">
+    <file>power.png</file>
+    <file>logoeii.png</file>
+    <file>logouma.jpg</file>
+  </qresource>
+</RCC>

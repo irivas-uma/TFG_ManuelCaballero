@@ -1,2 +1,6 @@
-.
-2
+Cada uno de los archivos tiene una función. Las imágenes son necesarias para que aparezcan en la interfaz. 
+Archivo imagenes_rc.py e imagenes.rc: se utilizan como recurso para almacenar las imágenes y sus rutas para la interfaz.
+Comprobaciones.py : se corresponde con la ventana que aparece a la hora de presionar el botón de comprobaciones en el interfaz principal.
+interfaz.py : es el propio interfaz que se utiliza y también el nodo publicador llamado interfaz.
+aspirador.py : es el nodo subscriptor.
+La carpeta __pychache__ es una carpeta de caché, por lo que es mejor ignorarla.
