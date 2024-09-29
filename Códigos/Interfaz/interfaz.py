@@ -3,7 +3,7 @@ import rospy
 from std_msgs.msg import Bool
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from comprobaciones import Ui_comprobaciones
+from verificacion import Ui_verificacion
 
 class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -20,7 +20,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def openWindow(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_comprobaciones()
+        self.ui = Ui_verificacion()
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -53,9 +53,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label_4.setGeometry(QtCore.QRect(590, 350, 231, 111))
         self.label_4.setObjectName("label_4")
 
-        # Botón para comprobaciones
+        # Botón para verificacion
         self.pushbutton2 = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.openWindow())
-        self.pushbutton2.setGeometry(QtCore.QRect(20, 430, 151, 25))
+        self.pushbutton2.setGeometry(QtCore.QRect(20, 430, 200, 25))
         self.pushbutton2.setAutoDefault(False)
         self.pushbutton2.setDefault(False)
         self.pushbutton2.setFlat(False)
@@ -92,7 +92,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Interfaz Aspirador"))
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:9pt;\">Autor: Manuel Caballero Roldán</span></p><p><span style=\" font-size:9pt;\">Tutoras:</span></p><p><span style=\" font-size:9pt;\">- Irene Rivas Blanco</span></p><p><span style=\" font-size:9pt;\">- Eva María Góngora Rodríguez</span></p></body></html>"))
-        self.pushbutton2.setText(_translate("MainWindow", "Comprobaciones"))
+        self.pushbutton2.setText(_translate("MainWindow", "Verificación de puesta en marcha"))
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600; text-decoration: underline;\">AUTOMATIZACIÓN DE UN ASPIRADOR QUIRÚRGICO </span></p><p align=\"center\"><span style=\" font-weight:600; text-decoration: underline;\">INTEGRADO EN UN SISTEMA ROBÓTICO</span></p><p align=\"center\"><br/></p></body></html>"))
 
     def toggle_aspirator(self):
